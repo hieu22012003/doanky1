@@ -1,0 +1,17 @@
+#wrapper{
+
+}
+#header{
+    height: 45px;
+    background-color: azure;
+}
+#menu{
+
+}
+#menu.li{
+    display: inline-block;
+}
+#menu.li.a{
+    color: #000;
+    text-decoration: none;
+}
