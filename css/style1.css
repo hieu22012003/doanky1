@@ -35,20 +35,31 @@ body {
   }
   .topnav-right{
     float: right;
-    display: flex;
   }
-  .topnav-right button{
+  .topnav .search-container {
+    float: right;
+  }
+  
+  .topnav input[type=text] {
+    padding: 6px;
+    margin-top: 8px;
+    font-size: 17px;
+    border: none;
+  }
+  
+  .topnav .search-container button {
     float: right;
     padding: 6px 10px;
     margin-top: 8px;
     margin-right: 16px;
-    background: gainsboro;
+    background: #ddd;
     font-size: 17px;
     border: none;
     cursor: pointer;
   }
-  .topnav-right button:hover{
-    background-color: aliceblue;
+  
+  .topnav .search-container button:hover {
+    background: #ccc;
   }
   .column {
     float: left;
@@ -137,7 +148,6 @@ section .container .containerForm{
   padding-left: 250px;
   width: calc(100% - 150px);
   height: 100%;
-  box-shadow: 0 50px 50px rgba(0,0,0,0.5);
 }
 section .container .containerForm h2{
   color: #0f3959;
@@ -173,9 +183,9 @@ section .container .containerForm .formBox .inputBox input,
      border-bottom: 1px solid #777;
      outline: none;
  }
-/* section .container .containerForm .formBox .inputBox textarea{
+section .container .containerForm .formBox .inputBox textarea{
      min-height: 120px;
- } */
+ }
 section .container .containerForm .formBox .inputBox input[type="submit"]{
      position: relative;
      cursor: pointer;
@@ -213,24 +223,26 @@ section .container .containerForm .formBox .inputBox textarea:valid ~ span{
       float: none;
       display: block;
     }
-    
+    .topnav .search-container {
+      float: none;
+    }
+    .topnav a, .topnav input[type=text], .topnav .search-container button {
+      float: none;
+      display: block;
+      text-align: left;
+      width: 100%;
+      margin: 0;
+      padding: 14px;
+    }
+    .topnav input[type=text] {
+      border: 1px solid #ccc;  
+    }
     .topnav-centered a {
       position: relative;
       top: 0;
       left: 0;
       transform: none;
     }
-    .topnav a, .topnav input[type=text], .topnav .topnav-right button {
-        float: none;
-        display: block;
-        text-align: left;
-        width: 100%;
-        margin: 0;
-        padding: 14px;
-      }
-      .topnav input[type=text] {
-        border: 1px solid #ccc;  
-      }
       .column {
         width: 100%;
       }
